@@ -9,8 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .vpn-notice{position:fixed;z-index:10;bottom:20px;left:50%;display:flex;align-items:center;gap:10px;width:min(460px,calc(100% - 40px));padding:13px 14px 13px 16px;background:var(--ink);box-shadow:6px 6px 0 var(--blue);color:#fff;font-size:12px;font-weight:700;line-height:1.35;transform:translate(-50%,0);animation:notice-enter .55s cubic-bezier(.2,.8,.2,1) both;transition:opacity .35s ease,transform .35s ease}.vpn-notice--hidden{opacity:0;transform:translate(-50%,18px);pointer-events:none}.vpn-notice__dot{width:8px;height:8px;flex:0 0 auto;border-radius:50%;background:#74b7ff;animation:notice-dot 1.8s ease-in-out infinite}.vpn-notice__close{margin-left:auto;padding:0 2px;border:0;background:transparent;color:#fff;cursor:pointer;font:400 24px/16px Arial;opacity:.8;transition:opacity .2s ease,transform .2s ease}.vpn-notice__close:hover{opacity:1;transform:rotate(90deg)}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}.reveal--visible{opacity:1;transform:none}.noon__inner:before{content:"";position:absolute;top:-110px;right:14%;width:260px;height:260px;border:1px solid rgba(255,255,255,.25);border-radius:50%;animation:orbit-drift 10s ease-in-out infinite}.support{position:relative;overflow:hidden}.support:after{content:"";position:absolute;right:7%;bottom:-120px;width:300px;height:300px;border:1px solid rgba(255,255,255,.22);border-radius:50%;animation:orbit-drift 12s -3s ease-in-out infinite}.support__inner{position:relative;z-index:1}.rule-list li{transition:padding-left .3s ease,background-color .3s ease,transform .3s ease}.rule-list li:hover{transform:translateX(4px)}.faq details{transition:background-color .25s ease,padding-left .25s ease}.faq details[open]{padding-left:12px;background:rgba(8,124,255,.06)}@keyframes notice-enter{from{opacity:0;transform:translate(-50%,18px)}to{opacity:1;transform:translate(-50%,0)}}@keyframes notice-dot{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.55);opacity:1}}@keyframes orbit-drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-14px,18px)}}@media(max-width:480px){.vpn-notice{bottom:12px;width:calc(100% - 32px);font-size:11px}.noon__inner:before{right:-70px}.support:after{right:-120px}}@media(prefers-reduced-motion:reduce){.vpn-notice,.vpn-notice__dot,.noon__inner:before,.support:after{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+    </style>
   </head>
   <body>
+    <div class="vpn-notice" role="status" aria-live="polite">
+      <span class="vpn-notice__dot" aria-hidden="true"></span>
+      <span>Для стабильной работы сайта может понадобиться VPN.</span>
+      <button class="vpn-notice__close" type="button" aria-label="Закрыть уведомление">×</button>
+    </div>
     <header class="header container">
       <a class="brand" href="#top" aria-label="Сохрани голос — на главную">
         <img src="логотип.png" alt="" />
@@ -37,7 +45,7 @@
         </div>
       </section>
 
-      <section class="rules container" id="rules">
+      <section class="rules container reveal" id="rules">
         <div class="section-heading">
           <p class="eyebrow">Короткая памятка</p>
           <h2>Четыре шага<br />к своему голосу</h2>
@@ -72,7 +80,7 @@
         </a>
       </section>
 
-      <section class="noon" id="noon" aria-labelledby="noon-title">
+      <section class="noon reveal" id="noon" aria-labelledby="noon-title">
         <div class="container">
           <div class="noon__inner">
             <div class="noon__badge">Объявление</div>
@@ -89,7 +97,7 @@
         </div>
       </section>
 
-      <section class="share container" aria-labelledby="share-title">
+      <section class="share container reveal" aria-labelledby="share-title">
         <div>
           <p class="eyebrow">Поделитесь памяткой</p>
           <h2 id="share-title">Один клик —<br />ещё один голос.</h2>
@@ -100,7 +108,20 @@
         </div>
       </section>
 
-      <section class="faq" aria-labelledby="faq-title">
+      <section class="support reveal" aria-labelledby="support-title">
+        <div class="container support__inner">
+          <div>
+            <p class="eyebrow">Поддержка проекта</p>
+            <h2 id="support-title">Помогите<br />сохранить голос.</h2>
+          </div>
+          <div class="support__body">
+            <p>«Сохранить голос» — дочерний независимый медиапроект Центра Ц. Ваша поддержка помогает нам продолжать работу.</p>
+            <a class="button button--support" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noreferrer">Поддержать нашу работу <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq reveal" aria-labelledby="faq-title">
         <div class="container faq__grid">
           <div>
             <p class="eyebrow">Короткие ответы</p>
@@ -127,7 +148,7 @@
         </div>
       </section>
 
-      <section class="help" id="help">
+      <section class="help reveal" id="help">
         <div class="container help__grid">
           <div>
             <p class="eyebrow">Если заметил нарушение</p>
@@ -143,7 +164,7 @@
         </div>
       </section>
 
-      <section class="poster container">
+      <section class="poster container reveal">
         <div class="poster__copy"><p class="eyebrow">Сохрани и поделись</p><h2>Памятка<br />в одном кадре</h2><p>Отправь её близким, чтобы важные правила всегда были под рукой.</p><a class="button button--dark" href="kfkfds.png" download>Скачать памятку <span aria-hidden="true">↓</span></a></div>
         <a class="poster__image" href="kfkfds.png" target="_blank" aria-label="Открыть памятку в полном размере"><img src="kfkfds.png" alt="Памятка: как не дать украсть твой голос" /></a>
       </section>
@@ -151,8 +172,24 @@
 
     <footer class="footer container">
       <a class="brand" href="#top"><img src="логотип.png" alt="" /><span>Сохрани<br />голос</span></a>
-      <p>Сохранить голос — сохранить справедливость.</p>
+      <p class="footer__legal">СОХРАНИТЬ ГОЛОС © 2026<br />Дочерний независимый медиапроект Центра Ц.<br />Все пожертвования добровольны и направляются исключительно на поддержку деятельности проекта.<br />Материалы сайта публикуются в информационных целях. Все права защищены.</p>
       <a href="https://t.me/savevote" target="_blank" rel="noreferrer">@savevote ↗</a>
     </footer>
+    <script>
+      const notice = document.querySelector('.vpn-notice');
+      const closeNotice = () => notice.classList.add('vpn-notice--hidden');
+      document.querySelector('.vpn-notice__close').addEventListener('click', closeNotice);
+      window.setTimeout(closeNotice, 5000);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>
