@@ -135,6 +135,18 @@ html,body{max-width:100%;overflow-x:hidden}img,svg{max-width:100%}.rules>*,.noon
 @media(max-width:850px){.hero,.hero__inner{min-height:78svh}.rules{padding:64px 0 54px}.noon,.noon__inner{min-height:0}.noon__inner{padding-top:82px;padding-bottom:48px}.share{min-height:0;padding:58px 0}.help,.help__grid,.support,.support__inner{min-height:0;padding-top:62px;padding-bottom:62px}.poster{min-height:0;padding:58px 0}.faq{min-height:0;padding:62px 0}}
 @media(max-width:430px){.hero,.hero__inner{min-height:600px}.hero__copy{top:100px}.rules{padding:52px 0 42px}.noon__inner{padding-top:78px;padding-bottom:38px}.share{padding:48px 0}.help,.help__grid,.support,.support__inner{padding-top:52px;padding-bottom:52px}.poster{padding:48px 0}.faq{padding:52px 0}}
 
+/* Короткая и заметная навигация на мобильных. */
+@media(max-width:850px){.header{grid-template-columns:minmax(0,1fr) 68px 40px}.menu-toggle{display:flex;align-items:center;justify-content:center;gap:6px;width:68px;padding:0;border-radius:22px;background:var(--cloud);font-family:Manrope,Arial,sans-serif;font-size:11px;font-weight:800}.menu-toggle b{font:inherit}.menu-toggle__bars{display:grid!important;gap:4px;width:14px;height:auto!important;background:none!important;transform:none!important}.menu-toggle__bars i{display:block;width:14px;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s ease}.header--menu-open .menu-toggle__bars{transform:none!important}.header--menu-open .menu-toggle__bars i:first-child{transform:translateY(3px) rotate(45deg)}.header--menu-open .menu-toggle__bars i:last-child{transform:translateY(-3px) rotate(-45deg)}.header nav{top:54px}.header nav a{padding:11px 12px;font-size:13px}}
+@media(max-width:430px){.header{grid-template-columns:minmax(0,1fr) 64px 38px}.menu-toggle{width:64px;font-size:10px}.header .telegram{width:38px;height:38px}.header .brand__name{font-size:9px}}
+
+/* Уменьшенная по габаритам навигационная плашка — подписи разделов сохранены. */
+.header{top:18px;height:40px;width:min(850px,calc(100% - 48px))}.header .brand{padding:0 14px}.header .brand img{width:104px;height:26px}.header nav{gap:17px;padding:0 20px}.header nav a{font-size:10px}.telegram{height:40px;padding:0 12px 0 17px;font-size:10px}.telegram span{width:29px;height:29px;margin-right:-7px;font-size:15px}
+@media(max-width:850px){.header{top:12px;height:40px;width:calc(100% - 28px)}.header .brand img{width:31px;height:24px}.menu-toggle{height:36px}.header .telegram{height:36px}.header nav{top:46px;padding:6px;border-radius:14px}.header nav a{padding:9px 10px;font-size:12px}}
+@media(max-width:430px){.header{top:9px;left:14px;width:calc(100% - 28px);height:40px}.header nav{top:46px}.menu-toggle{height:34px}.header .telegram{height:34px}}
+
+/* Надёжный мобильный знак: не зависит от загрузки PNG и всегда виден на шапке. */
+@media(max-width:850px){.header .brand{display:flex!important;align-items:center;gap:7px;color:var(--ink)!important}.header .brand img{display:none}.header .brand:before{content:"✓";display:grid;place-items:center;width:25px;height:25px;flex:0 0 auto;background:#1477ef;color:#fff;font-family:Arial,sans-serif;font-size:19px;font-weight:900;line-height:1}.header .brand__name{display:block!important;color:var(--ink)!important;opacity:1!important;font-size:10px!important;line-height:.9!important}.header .brand:hover:before{transform:scale(1.04)}}
+
 /* Без теней: ни у текста, ни у карточек, ни у иконок. */
 *,*::before,*::after{box-shadow:none!important;text-shadow:none!important}
 .brand img,.hero__mark img{filter:none!important}

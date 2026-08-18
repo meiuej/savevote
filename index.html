@@ -20,22 +20,6 @@
       <span>Для стабильной работы сайта может понадобиться VPN.</span>
       <button class="vpn-notice__close" type="button" aria-label="Закрыть уведомление">×</button>
     </div>
-    <header class="header container">
-      <a class="brand" href="#top" aria-label="Сохрани голос — на главную">
-        <img src="логотип.png" alt="Сохрани голос" />
-        <span class="brand__name">Сохрани<br />голос</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-      <nav aria-label="Основная навигация">
-        <a href="#noon">Полдень за мирную Россию</a>
-        <a href="#rules">Памятка</a>
-        <a href="#help">Что делать</a>
-      </nav>
-      <a class="telegram" href="https://t.me/savevote" target="_blank" rel="noreferrer">@savevote <span aria-hidden="true">↗</span></a>
-    </header>
-
     <main id="top">
       <section class="hero">
         <div class="container hero__inner">
@@ -199,17 +183,6 @@
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
 
-      const menuToggle = document.querySelector('.menu-toggle');
-      const header = document.querySelector('.header');
-      menuToggle.addEventListener('click', () => {
-        const isOpen = header.classList.toggle('header--menu-open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-        menuToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-      });
-      document.querySelectorAll('.header nav a').forEach((link) => link.addEventListener('click', () => {
-        header.classList.remove('header--menu-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }));
     </script>
   </body>
 </html>
