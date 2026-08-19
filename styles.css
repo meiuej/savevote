@@ -150,3 +150,15 @@ html,body{max-width:100%;overflow-x:hidden}img,svg{max-width:100%}.rules>*,.noon
 /* Без теней: ни у текста, ни у карточек, ни у иконок. */
 *,*::before,*::after{box-shadow:none!important;text-shadow:none!important}
 .brand img,.hero__mark img{filter:none!important}
+
+/* «Галочка»: отдельный маршрут к инструментам защиты выбора. */
+.galochka{position:relative;overflow:hidden;background:var(--sky)}
+.galochka:after{content:"✓";position:absolute;right:max(4%,calc((100vw - 1120px)/2));bottom:-.22em;color:rgba(255,255,255,.58);font:900 clamp(180px,25vw,320px)/1 Montserrat,Arial,sans-serif}
+.galochka__inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;min-height:470px;padding:72px 0}
+.galochka .eyebrow{color:#657275}
+.galochka h2{font-size:clamp(58px,6.8vw,92px)}
+.galochka__body{max-width:410px}
+.galochka__body p{margin:0;font-size:15px;line-height:1.58}
+.galochka__lead{margin-bottom:12px!important;font-family:Montserrat,Manrope,Arial,sans-serif;font-size:24px!important;font-weight:800;letter-spacing:-.055em;line-height:1.05!important;text-transform:uppercase}
+@media(max-width:850px){.galochka__inner{grid-template-columns:1fr;gap:34px;min-height:0;padding:62px 0}.galochka h2{font-size:clamp(54px,10vw,76px)}.galochka__body{max-width:430px}.galochka:after{right:-12px;font-size:220px}}
+@media(max-width:430px){.galochka__inner{gap:28px;padding:52px 0}.galochka h2{font-size:48px}.galochka__lead{font-size:20px!important}.galochka__body p{font-size:14px}.galochka:after{right:-20px;font-size:170px}}
