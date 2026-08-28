@@ -162,3 +162,35 @@ html,body{max-width:100%;overflow-x:hidden}img,svg{max-width:100%}.rules>*,.noon
 .galochka__lead{margin-bottom:12px!important;font-family:Montserrat,Manrope,Arial,sans-serif;font-size:24px!important;font-weight:800;letter-spacing:-.055em;line-height:1.05!important;text-transform:uppercase}
 @media(max-width:850px){.galochka__inner{grid-template-columns:1fr;gap:34px;min-height:0;padding:62px 0}.galochka h2{font-size:clamp(54px,10vw,76px)}.galochka__body{max-width:430px}.galochka:after{right:-12px;font-size:220px}}
 @media(max-width:430px){.galochka__inner{gap:28px;padding:52px 0}.galochka h2{font-size:48px}.galochka__lead{font-size:20px!important}.galochka__body p{font-size:14px}.galochka:after{right:-20px;font-size:170px}}
+
+/* Общий блок полезных сервисов. */
+@font-face{font-family:BIM;src:url('BIM.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+body,button,input,textarea,select,.brand,.hero h1,h2,.rule-number,.rule-list h3,.polling-place__copy strong,.noon__call,.faq summary{font-family:BIM,Arial,sans-serif}
+.tools{overflow:hidden;background:linear-gradient(115deg,#b9e1e6 0%,#4da6ba 45%,#4dacc1 100%);color:#fff}
+.tools__inner{padding:72px 0 48px;text-align:center}
+.tools__heading h2{font-size:clamp(54px,7.6vw,104px);font-weight:400;letter-spacing:-.06em;line-height:.9;text-transform:none}
+.tools__heading p{max-width:650px;margin:30px auto 0;font-size:clamp(19px,2.15vw,30px);line-height:1.08}
+.tools__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:900px;margin:58px auto 20px}
+.tool-card{position:relative;display:flex;min-height:334px;flex-direction:column;align-items:center;padding:28px 26px 24px;border:4px solid rgba(34,132,153,.74);border-radius:34px;background:#fff;color:#101010;text-decoration:none;transition:transform .2s ease,background-color .2s ease}
+.tool-card:hover{background:#f5fdff;transform:translateY(-5px)}
+.tool-card__image,.tool-card__logo{width:198px;height:198px;max-width:100%;border-radius:31px;object-fit:cover}
+.tool-card__logo{display:grid;place-items:center;background:#fff;color:#052b65;font-size:clamp(29px,3vw,41px);font-style:italic;letter-spacing:-.075em}
+.tool-card__logo::first-letter{color:#e22a14}
+.tool-card h3{margin:16px 0 3px;font-size:20px;font-weight:400;line-height:1;text-wrap:balance}
+.tool-card p{max-width:220px;margin:0;font-size:13px;line-height:1.04;text-wrap:balance}
+.tool-card__arrow{position:absolute;right:15px;bottom:13px;opacity:0;font-size:16px;transition:opacity .2s ease,transform .2s ease}.tool-card:hover .tool-card__arrow{opacity:1;transform:translate(2px,-2px)}
+.tools__note{margin:0;color:rgba(27,71,78,.62);font-size:14px}
+@media(max-width:850px){.tools__inner{padding:58px 0 36px}.tools__cards{gap:16px;margin-top:42px}.tool-card{min-height:286px;padding:19px 16px 18px;border-radius:27px}.tool-card__image,.tool-card__logo{width:158px;height:158px;border-radius:25px}.tool-card h3{margin-top:13px;font-size:17px}.tool-card p{font-size:12px}}
+@media(max-width:620px){.tools__heading h2{font-size:53px}.tools__heading p{max-width:360px;margin-top:22px;font-size:19px}.tools__cards{grid-template-columns:1fr;max-width:320px;margin-top:34px}.tool-card{min-height:0;padding:24px 22px}.tool-card__image,.tool-card__logo{width:176px;height:176px}.tool-card p{font-size:13px}.tools__note{margin-top:22px}}
+
+/* Первый экран по референсу: свободная композиция с крупным знаком справа. */
+.hero{min-height:600px;background:#5aaec0}
+.hero__inner{width:100%;min-height:600px}
+.hero__copy{top:50px;left:clamp(32px,4.3vw,66px);width:min(470px,42vw)}
+.hero h1{font-size:clamp(68px,7.2vw,110px);font-weight:400;letter-spacing:-.07em;line-height:.92;text-transform:none}
+.hero__lead{max-width:430px;margin-top:27px;padding-top:0;border:0;font-size:clamp(18px,1.65vw,26px);font-weight:400;line-height:1.01}
+.hero__copy .button{margin-top:28px;background:#fff;color:#215d68;font-size:13px}
+.hero__copy .button span{background:#215d68}
+.hero__mark{right:-190px;bottom:-124px;width:min(67vw,900px);opacity:1;mix-blend-mode:normal}
+@media(max-width:850px){.hero,.hero__inner{min-height:620px}.hero__copy{top:92px;left:32px;width:min(420px,62vw)}.hero h1{font-size:clamp(64px,11vw,92px)}.hero__lead{font-size:20px}.hero__mark{right:-240px;bottom:-90px;width:720px}}
+@media(max-width:580px){.hero,.hero__inner{min-height:620px}.hero__copy{top:86px;left:24px;width:calc(100% - 48px)}.hero h1{font-size:clamp(54px,16vw,74px)}.hero__lead{max-width:290px;font-size:18px}.hero__mark{right:-222px;bottom:-64px;width:590px}.hero__copy .button{font-size:12px}}
