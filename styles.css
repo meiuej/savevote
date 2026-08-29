@@ -192,5 +192,17 @@ body,button,input,textarea,select,.brand,.hero h1,h2,.rule-number,.rule-list h3,
 .hero__copy .button{margin-top:28px;background:#fff;color:#215d68;font-size:13px}
 .hero__copy .button span{background:#215d68}
 .hero__mark{right:-190px;bottom:-124px;width:min(67vw,900px);opacity:1;mix-blend-mode:normal}
+.hero h1{font-size:clamp(62px,6.4vw,96px)}
 @media(max-width:850px){.hero,.hero__inner{min-height:620px}.hero__copy{top:92px;left:32px;width:min(420px,62vw)}.hero h1{font-size:clamp(64px,11vw,92px)}.hero__lead{font-size:20px}.hero__mark{right:-240px;bottom:-90px;width:720px}}
+
+/* Спокойный завершающий блок поддержки перед юридической информацией. */
+.support{min-height:330px;background:var(--cloud);color:var(--ink)}
+.support:after{display:none}
+.support__inner{min-height:330px;gap:64px}
+.support h2{font-size:clamp(34px,3.5vw,48px)}
+.support .eyebrow{color:#778084}
+.support__body p{max-width:370px;font-size:14px}
+.button--support{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.button--support span{background:var(--ink);color:#fff}
+@media(max-width:850px){.support,.support__inner{min-height:0}.support__inner{gap:30px;padding-top:52px;padding-bottom:52px}}
 @media(max-width:580px){.hero,.hero__inner{min-height:620px}.hero__copy{top:86px;left:24px;width:calc(100% - 48px)}.hero h1{font-size:clamp(54px,16vw,74px)}.hero__lead{max-width:290px;font-size:18px}.hero__mark{right:-222px;bottom:-64px;width:590px}.hero__copy .button{font-size:12px}}
