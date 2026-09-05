@@ -9,10 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .vpn-notice{position:fixed;z-index:10;bottom:20px;left:50%;display:flex;align-items:center;gap:10px;width:min(460px,calc(100% - 40px));padding:13px 14px 13px 16px;background:var(--ink);box-shadow:6px 6px 0 var(--blue);color:#fff;font-size:12px;font-weight:700;line-height:1.35;transform:translate(-50%,0);animation:notice-enter .55s cubic-bezier(.2,.8,.2,1) both;transition:opacity .35s ease,transform .35s ease}.vpn-notice--hidden{opacity:0;transform:translate(-50%,18px);pointer-events:none}.vpn-notice__dot{width:8px;height:8px;flex:0 0 auto;border-radius:50%;background:#74b7ff;animation:notice-dot 1.8s ease-in-out infinite}.vpn-notice__close{margin-left:auto;padding:0 2px;border:0;background:transparent;color:#fff;cursor:pointer;font:400 24px/16px Arial;opacity:.8;transition:opacity .2s ease,transform .2s ease}.vpn-notice__close:hover{opacity:1;transform:rotate(90deg)}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}.reveal--visible{opacity:1;transform:none}.noon__inner:before{content:"";position:absolute;top:-110px;right:14%;width:260px;height:260px;border:1px solid rgba(255,255,255,.25);border-radius:50%;animation:orbit-drift 10s ease-in-out infinite}.support{position:relative;overflow:hidden}.support:after{content:"";position:absolute;right:7%;bottom:-120px;width:300px;height:300px;border:1px solid rgba(255,255,255,.22);border-radius:50%;animation:orbit-drift 12s -3s ease-in-out infinite}.support__inner{position:relative;z-index:1}.rule-list li{transition:padding-left .3s ease,background-color .3s ease,transform .3s ease}.rule-list li:hover{transform:translateX(4px)}.faq details{transition:background-color .25s ease,padding-left .25s ease}.faq details[open]{padding-left:12px;background:rgba(8,124,255,.06)}@keyframes notice-enter{from{opacity:0;transform:translate(-50%,18px)}to{opacity:1;transform:translate(-50%,0)}}@keyframes notice-dot{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.55);opacity:1}}@keyframes orbit-drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-14px,18px)}}@media(max-width:480px){.vpn-notice{bottom:12px;width:calc(100% - 32px);font-size:11px}.noon__inner:before{right:-70px}.support:after{right:-120px}}@media(prefers-reduced-motion:reduce){.vpn-notice,.vpn-notice__dot,.noon__inner:before,.support:after{animation:none}.reveal{opacity:1;transform:none;transition:none}}
-    </style>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="vpn-notice" role="status" aria-live="polite">
@@ -21,6 +17,7 @@
       <button class="vpn-notice__close" type="button" aria-label="Закрыть уведомление">×</button>
     </div>
     <main id="top">
+      <div class="intro">
       <section class="hero">
         <div class="container hero__inner">
           <div class="hero__copy">
@@ -67,6 +64,8 @@
         </div>
       </section>
 
+      </div>
+
       <section class="faq reveal" aria-labelledby="faq-title">
         <div class="container faq__grid">
           <div>
@@ -74,22 +73,22 @@
             <h2 id="faq-title">Есть<br />вопросы?</h2>
           </div>
           <div class="faq__list">
-            <details>
-              <summary>За кого голосовать?<span aria-hidden="true">+</span></summary>
+            <article class="faq-card">
+              <h3>За кого голосовать?</h3>
               <p>По одномандатному округу можно ориентироваться на кандидата от «Яблока» или на рекомендацию «Умного голосования», когда она появится. С федеральным списком пока всё неясно — следите за обновлениями ближе к голосованию. Окончательный выбор остаётся за вами.</p>
-            </details>
-            <details>
-              <summary>Что делать, если меня принуждают?<span aria-hidden="true">+</span></summary>
+            </article>
+            <article class="faq-card">
+              <h3>Что делать, если меня принуждают?</h3>
               <p>По возможности зафиксируйте, что произошло, где и когда. Сообщить о ситуации можно через наш бот или по горячей линии ЦИК, указанные ниже.</p>
-            </details>
-            <details>
-              <summary>Когда приходить голосовать?<span aria-hidden="true">+</span></summary>
+            </article>
+            <article class="faq-card">
+              <h3>Когда приходить голосовать?</h3>
               <p>Приходите голосовать лично 20 сентября после обеда. Перед визитом проверьте часы работы своего участка.</p>
-            </details>
-            <details>
-              <summary>Нужно ли показывать свой бюллетень?<span aria-hidden="true">+</span></summary>
+            </article>
+            <article class="faq-card">
+              <h3>Нужно ли показывать свой бюллетень?</h3>
               <p>Нет. Голосование тайное, и вы не обязаны сообщать или доказывать кому-либо свой выбор.</p>
-            </details>
+            </article>
           </div>
         </div>
       </section>
@@ -126,15 +125,13 @@
     </main>
 
     <footer class="footer container">
-      <a class="brand" href="#top"><img src="логотип.png" alt="" /><span>Сохрани<br />голос</span></a>
-      <p class="footer__legal">СОХРАНИТЬ ГОЛОС © 2026<br />Дочерний независимый медиапроект Центра Ц.<br />Все пожертвования добровольны и направляются исключительно на поддержку деятельности проекта.<br />Материалы сайта публикуются в информационных целях. Все права защищены.<br />© Шрифт: BIM (c) Ilya Kolobov, 2025. Freeware.</p>
+      <p class="footer__legal">© 2026 «Сохранить голос» — независимый медиапроект Центра Ц.<br /><br />Все пожертвования добровольны и направляются на поддержку деятельности проекта. Пожертвование не является условием доступа к материалам сайта.<br /><br />Проект публикует справочную информацию, мнения и рекомендации для самостоятельного принятия решений. Рекомендации не обязательны к исполнению. Окончательный выбор всегда остаётся за избирателем.<br /><br />Все права на собственные материалы проекта защищены. Права на сторонние изображения, логотипы и шрифты принадлежат их правообладателям.<br />Шрифт: BIM © Ilya Kolobov, 2025. Лицензия: Freeware.</p>
       <a href="https://t.me/savevote" target="_blank" rel="noreferrer">@savevote ↗</a>
     </footer>
     <script>
       const notice = document.querySelector('.vpn-notice');
-      const closeNotice = () => notice.classList.add('vpn-notice--hidden');
-      document.querySelector('.vpn-notice__close').addEventListener('click', closeNotice);
-      window.setTimeout(closeNotice, 5000);
+      document.querySelector('.vpn-notice__close').addEventListener('click', () => notice.hidden = true);
+      window.setTimeout(() => notice.hidden = true, 5000);
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -143,9 +140,31 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0.08 });
       document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
 
+      // Repeat the existing answers for a seamless mobile loop, without new content.
+      const list = document.querySelector('.faq__list');
+      const track = document.createElement('div');
+      track.className = 'faq__track';
+      list.before(track);
+      track.append(list);
+      const copy = list.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.inert = true;
+      copy.classList.add('faq__list--copy');
+      track.append(copy);
+      const viewport = document.createElement('div');
+      viewport.className = 'faq__viewport';
+      viewport.tabIndex = 0;
+      viewport.setAttribute('role', 'region');
+      viewport.setAttribute('aria-label', 'Вопросы и ответы');
+      track.before(viewport);
+      viewport.append(track);
+      // Pause while a reader touches or focuses the answers.
+      viewport.addEventListener('pointerdown', () => viewport.classList.add('is-paused'));
+      viewport.addEventListener('pointerleave', () => viewport.classList.remove('is-paused'));
+      viewport.addEventListener('blur', () => viewport.classList.remove('is-paused'));
     </script>
   </body>
 </html>
