@@ -25,6 +25,16 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 .tool-card p{max-width:225px;font-size:14px;line-height:1.05;text-wrap:balance}
 .tool-card__arrow{position:absolute;right:12px;bottom:9px;opacity:0;transition:opacity .25s}
 .tools__note{color:#74888d;font-size:15px}
+.countdown{padding:60px 0 30px;text-align:center}
+.countdown h2{font-size:clamp(40px,5vw,72px)}
+.countdown__timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:min(100%,850px);margin:40px auto 0;padding:28px;border-radius:44px;background:var(--blue)}
+.countdown__timer[hidden]{display:none}
+.countdown__unit{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:18px 8px 16px;border-radius:30px;background:#c8f7ff}
+.countdown__value{position:relative;display:block;overflow:hidden;min-width:2.1ch;text-align:center;font-family:BIM,Arial,sans-serif;font-size:clamp(60px,8vw,112px);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.055em}
+.countdown__digit{display:block}
+.countdown__digit--outgoing{position:absolute;inset:0;pointer-events:none}
+.countdown__label{font-size:clamp(18px,2vw,26px);line-height:1.1}
+.countdown__date{margin-top:18px;color:#548b98;font-size:16px}
 .faq{background:#fff;padding:70px 0 80px;overflow:hidden}
 .faq__grid>div:first-child{text-align:center;margin-bottom:54px}
 .eyebrow{font-size:15px;margin-bottom:14px;color:#548b98}
@@ -49,6 +59,7 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 @media(hover:hover){.tool-card:hover,.faq-card:hover{transform:scale(1.045);z-index:1}.tool-card:hover .tool-card__arrow{opacity:1}.contacts a:hover,.button:hover{transform:scale(1.025)}}
 @media(max-width:1000px) and (min-width:701px){.container{width:calc(100% - 48px)}.tools__cards{gap:12px}.tool-card{padding:18px 10px;border-radius:24px}.tool-card__image,.tool-card__logo{width:145px;height:145px}.tool-card h3{font-size:17px}.tool-card p{font-size:13px}.faq-card p{font-size:18px;padding:24px 18px}.faq-card h3{font-size:21px}}
 @media(max-width:700px){
+.countdown{padding:45px 0 28px}.countdown h2{font-size:clamp(36px,9vw,54px)}.countdown__timer{grid-template-columns:1fr;width:184px;gap:18px;margin-top:30px;padding:20px;border-radius:34px}.countdown__unit{padding:12px 8px;border-radius:24px}.countdown__value{font-size:88px}.countdown__label{font-size:22px}.countdown__date{font-size:14px}
 .container{width:calc(100% - 40px)}
 .intro{background:linear-gradient(to bottom,transparent 72%,#fff 100%),radial-gradient(ellipse at 50% 35%,#52a7bb 48%,#74b8c7 100%)}
 .hero{border:0}.hero__inner{min-height:380px;padding:90px 0 66px}.hero h1{font-size:clamp(48px,13.5vw,88px)}.hero__lead{max-width:360px;margin-top:25px;font-size:22px;line-height:1.1}

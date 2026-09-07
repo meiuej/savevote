@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="countdown.js" defer></script>
   </head>
   <body>
     <div class="vpn-notice" role="status" aria-live="polite">
@@ -65,6 +66,19 @@
       </section>
 
       </div>
+
+      <section class="countdown" aria-labelledby="countdown-title">
+        <div class="container">
+          <h2 id="countdown-title">До выборов<br />осталось…</h2>
+          <div class="countdown__timer" role="timer" aria-live="off" aria-label="До 20 сентября 2026 года, 08:00 по Москве" data-deadline="2026-09-20T08:00:00+03:00" hidden>
+            <div class="countdown__unit"><span class="countdown__value" data-value="days">00</span><span class="countdown__label" data-label="days">дней</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-value="hours">00</span><span class="countdown__label" data-label="hours">часов</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-value="minutes">00</span><span class="countdown__label" data-label="minutes">минут</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-value="seconds">00</span><span class="countdown__label" data-label="seconds">секунд</span></div>
+          </div>
+          <p class="countdown__date"><time datetime="2026-09-20T08:00:00+03:00">20 сентября 2026, 08:00 МСК</time></p>
+        </div>
+      </section>
 
       <section class="faq reveal" aria-labelledby="faq-title">
         <div class="container faq__grid">
