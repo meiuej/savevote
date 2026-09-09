@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260908-1" />
+    <link rel="stylesheet" href="styles.css?v=20260909-3" />
+    <script src="voting-notice.js?v=20260909-2" defer></script>
     <script src="countdown.js?v=20260908-1" defer></script>
   </head>
   <body>
@@ -29,7 +30,20 @@
         </div>
       </section>
 
-      <section class="tools reveal" aria-labelledby="tools-title">
+      <div class="voting-notice-slot container" hidden>
+        <div class="voting-notice-slot__inner">
+    <aside class="voting-notice" aria-label="Голосование по месту нахождения">
+      <a class="voting-notice__link" href="vote-nearby.html">
+        <span class="voting-notice__date">До 14 сентября</span>
+        <span class="voting-notice__text">В день выборов будете не по прописке? Выберите удобный участок заранее.</span>
+        <span class="voting-notice__action">Как это сделать <span aria-hidden="true">↗</span></span>
+      </a>
+      <button class="voting-notice__close" type="button" aria-label="Скрыть напоминание о выборе участка">×</button>
+    </aside>
+        </div>
+      </div>
+
+      <section id="tools" class="tools reveal" aria-labelledby="tools-title">
         <div class="container tools__inner">
           <div class="tools__heading">
             <h2 id="tools-title">Полезные<br />инструменты</h2>

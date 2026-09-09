@@ -75,3 +75,64 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 }
 @keyframes questions-drift{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;translate:none}.faq__list--copy{display:none}}
+
+/* Reminder and the voting-by-location guide share the site's BIM type and palette. */
+.voting-notice{display:flex;align-items:center;gap:8px;margin:12px;padding:10px 12px 10px 20px;border-radius:25px;background:var(--pale);color:#245867}
+.voting-notice[hidden]{display:none}
+.voting-notice__link{display:flex;align-items:center;gap:22px;flex:1;min-width:0;text-decoration:none}
+.voting-notice__date{flex-shrink:0;padding:10px 14px;border-radius:18px;background:#245867;color:white;font-size:17px}
+.voting-notice__text{font-size:20px;line-height:1.2;flex:1}
+.voting-notice__action{display:flex;align-items:center;gap:22px;padding:15px 19px;border-radius:18px;background:#fff;font-size:20px;white-space:nowrap}
+.voting-notice__close{flex-shrink:0;width:44px;height:44px;padding:0;border:0;border-radius:50%;color:#245867;background:transparent;font-family:Arial,sans-serif;font-size:28px;cursor:pointer}
+.voting-notice__link:hover .voting-notice__action,.voting-notice__close:hover{background:#d2e9ee}
+.guide-nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:25px;color:#245867}
+.guide-nav a{text-decoration:none;font-size:18px}.guide-nav .guide-brand{font-size:25px}
+.guide-width{max-width:1060px}
+.guide-hero{padding:64px 0 70px;background:radial-gradient(ellipse at 50% 25%,#52a7bb 25%,#8bc4cf 100%);color:#fff}
+.guide-kicker{font-size:20px;margin-bottom:30px}
+.guide-hero h1{font-size:clamp(64px,9vw,124px)}
+.guide-lead{max-width:850px;font-size:clamp(23px,2.5vw,31px);margin-top:30px;line-height:1.3}
+.guide-deadline{display:inline-block;margin-top:28px;padding:12px 18px;border-radius:18px;background:var(--pale);color:#245867;font-size:19px}
+.guide-content{padding-block:58px 20px}
+.guide-content h2{font-size:clamp(34px,4.4vw,58px);line-height:1.05}
+.guide-cta{background:#245867;border-radius:24px;font-size:24px;padding:22px 26px}
+.guide-steps{list-style:none;padding:0;margin:32px 0 48px;display:grid;gap:14px}
+.guide-steps li{display:flex;gap:26px;align-items:flex-start;padding:28px;border:2px solid #d6e9ed;border-radius:28px}
+.guide-step-number{color:#397989;font-size:46px;line-height:1;flex-shrink:0}
+.guide-steps h3{font-size:28px;margin-bottom:9px;line-height:1.1}
+.guide-steps p,.guide-important>p:not(.eyebrow),.guide-alternative p{font-size:22px;line-height:1.4}
+.guide-important{padding:34px;background:var(--pale);border-radius:32px}
+.guide-important>p:not(.eyebrow){margin-top:22px}
+.guide-alternative{padding-block:40px}.guide-alternative p{margin-top:20px}
+.guide-sources{padding-top:24px;border-top:1px solid #d6e9ed;color:#526b72}.guide-sources p{font-size:16px;line-height:1.5;margin-bottom:12px}.guide-sources a{text-underline-offset:3px}
+@media(max-width:1000px){.voting-notice__link{gap:14px;flex-wrap:wrap}.voting-notice__text{flex-basis:60%}.voting-notice__action{padding:10px 14px;font-size:18px}}
+@media(max-width:700px){
+.voting-notice{align-items:flex-start;margin:10px;padding:16px;border-radius:22px;position:relative}
+.voting-notice__link{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding-right:22px}
+.voting-notice__date{font-size:15px;padding:8px 12px}.voting-notice__text{font-size:20px}.voting-notice__action{font-size:18px}.voting-notice__close{position:absolute;right:6px;top:6px}
+.guide-nav{padding-block:20px}.guide-nav .guide-brand{font-size:20px}.guide-nav a{font-size:15px}
+.guide-hero{padding:40px 0}.guide-kicker{font-size:16px;margin-bottom:24px}.guide-hero h1{font-size:clamp(48px,12vw,80px)}.guide-lead{font-size:23px;margin-top:24px}.guide-deadline{font-size:16px;line-height:1.3}
+.guide-content{padding-top:36px}.guide-cta{font-size:20px;gap:16px;padding:20px;width:100%}
+.guide-steps li{padding:22px 18px;gap:16px;border-radius:24px}.guide-step-number{font-size:32px}.guide-steps h3{font-size:24px}.guide-steps p,.guide-important>p:not(.eyebrow),.guide-alternative p{font-size:20px}
+.guide-important{padding:26px 22px;border-radius:26px}.guide-important h2{font-size:34px}.guide-sources p{font-size:14px}
+}
+
+/* A single short layout animation makes room for the reminder, then stops. */
+.voting-notice-slot{display:grid;grid-template-rows:1fr}
+.voting-notice-slot[hidden]{display:none}
+.voting-notice-slot__inner{min-height:0;overflow:hidden}
+.voting-notice-slot .voting-notice{margin:18px 0 8px}
+@media(prefers-reduced-motion:no-preference){
+.voting-notice-slot--enter{animation:notice-space .55s cubic-bezier(.22,1,.36,1) .35s both}
+.voting-notice-slot--enter .voting-notice{animation:notice-arrive .55s ease-out .35s both}
+}
+@keyframes notice-space{from{grid-template-rows:0fr}to{grid-template-rows:1fr}}
+@keyframes notice-arrive{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Page entrance: compositor-friendly motion, once per navigation, no JS. */
+@media(prefers-reduced-motion:no-preference){
+.guide-page .guide-nav{animation:guide-enter .45s ease-out backwards}
+.guide-page .guide-hero .guide-width{animation:guide-enter .6s cubic-bezier(.22,1,.36,1) .06s backwards}
+.guide-page .guide-content{animation:guide-enter .6s cubic-bezier(.22,1,.36,1) .16s backwards}
+}
+@keyframes guide-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
