@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260909-3" />
+    <link rel="stylesheet" href="styles.css?v=20260911-3" />
     <script src="voting-notice.js?v=20260909-2" defer></script>
     <script src="countdown.js?v=20260908-1" defer></script>
   </head>
@@ -36,7 +36,7 @@
       <a class="voting-notice__link" href="vote-nearby.html">
         <span class="voting-notice__date">До 14 сентября</span>
         <span class="voting-notice__text">В день выборов будете не по прописке? Выберите удобный участок заранее.</span>
-        <span class="voting-notice__action">Как это сделать <span aria-hidden="true">↗</span></span>
+        <span class="voting-notice__action">Как это сделать <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></span>
       </a>
       <button class="voting-notice__close" type="button" aria-label="Скрыть напоминание о выборе участка">×</button>
     </aside>
@@ -54,25 +54,31 @@
               <img class="tool-card__image" src="smart-voting.png" alt="Логотип Умного голосования" />
               <h3>«Умное голосование»</h3>
               <p>Бот для выбора более оппозиционного кандидата в одномандатном округе.</p>
-              <span class="tool-card__arrow" aria-hidden="true">↗</span>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
             </a>
             <a class="tool-card" href="https://galochka.info" target="_blank" rel="noreferrer">
               <span class="tool-card__logo" aria-hidden="true">Галочка</span>
               <h3>«Галочка»</h3>
               <p>Инструменты для тех, кого лишают выбора.</p>
-              <span class="tool-card__arrow" aria-hidden="true">↗</span>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
             </a>
             <a class="tool-card" href="https://iditena.org" target="_blank" rel="noreferrer">
               <img class="tool-card__image" src="idite-na.png" alt="Максим Кац" />
               <h3>«Идите на»</h3>
               <p>Сайт Максима Каца с характеристиками кандидатов и его личным мнением.</p>
-              <span class="tool-card__arrow" aria-hidden="true">↗</span>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
             </a>
             <a class="tool-card" href="https://t.me/votespravkabot" target="_blank" rel="noreferrer">
               <img class="tool-card__image" src="photo_2026-09-04_15-58-43.jpg" alt="Логотип бота «Выборы — справка»" />
               <h3>«Выборы | FAQ | Шаблоны жалоб»</h3>
               <p>Бот со справочной информацией о выборах, ответами на вопросы и шаблонами жалоб.</p>
-              <span class="tool-card__arrow" aria-hidden="true">↗</span>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
+            </a>
+            <a class="tool-card" href="https://t.me/MirnyeNablyudateliBot" target="_blank" rel="noreferrer">
+              <img class="tool-card__image" src="mirnye-nablyudateli.jpg" alt="Логотип «Мирные наблюдатели»" loading="lazy" />
+              <h3>«Мирные наблюдатели»</h3>
+              <p>Telegram-бот проекта «Мирные наблюдатели».</p>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
             </a>
           </div>
           <p class="tools__note">Блок постоянно обновляется</p>
@@ -130,8 +136,8 @@
           <div class="help__body">
             <p>Запиши, что произошло, где и когда. Если тебя принуждают подтвердить свой выбор или ты заметил возможное нарушение, сохрани основные обстоятельства.</p>
             <div class="contacts">
-              <a href="https://t.me/savemyvote_bot" target="_blank" rel="noreferrer"><small>Бот для сообщений</small>@savemyvote_bot <span>↗</span></a>
-              <a href="tel:88002000020"><small>Горячая линия ЦИКа</small>8 800 200-00-20 <span>↗</span></a>
+              <a href="https://t.me/savemyvote_bot" target="_blank" rel="noreferrer"><small>Бот для сообщений</small>@savemyvote_bot <span><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+              <a href="tel:88002000020"><small>Горячая линия ЦИКа</small>8 800 200-00-20 <span><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
             </div>
           </div>
         </div>
@@ -145,16 +151,26 @@
           </div>
           <div class="support__body">
             <p>«Сохранить голос» — независимый медиапроект Центра Ц. Если хотите, вы можете помочь нам продолжать работу.</p>
-            <a class="button button--support" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noreferrer">Поддержать <span aria-hidden="true">↗</span></a>
+            <a class="button button--support" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noreferrer">Поддержать <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
           </div>
+        </div>
+      </section>
+
+      <section class="socials reveal" aria-labelledby="socials-title">
+        <div class="container">
+          <h2 id="socials-title">Соцсети</h2>
+          <nav class="socials__links" aria-label="Соцсети и связь">
+            <a href="https://t.me/savevote" target="_blank" rel="noreferrer"><span>Telegram<small>@savevote</small></span><span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+            <a href="https://t.me/savemyvote_bot" target="_blank" rel="noreferrer"><span>Связь<small>@savemyvote_bot</small></span><span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+            <a href="https://x.com/savevote_x" target="_blank" rel="noreferrer"><span>X<small>@savevote_x</small></span><span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+          </nav>
         </div>
       </section>
 
     </main>
 
-    <footer class="footer container">
+    <footer class="footer footer--legal-only container">
       <p class="footer__legal">© 2026 «Сохранить голос» — независимый медиапроект Центра Ц.<br /><br />Все пожертвования добровольны и направляются на поддержку деятельности проекта. Пожертвование не является условием доступа к материалам сайта.<br /><br />Проект публикует справочную информацию, мнения и рекомендации для самостоятельного принятия решений. Рекомендации не обязательны к исполнению. Окончательный выбор всегда остаётся за избирателем.<br /><br />Все права на собственные материалы проекта защищены. Права на сторонние изображения, логотипы и шрифты принадлежат их правообладателям.<br />Шрифт: BIM © Ilya Kolobov, 2025. Лицензия: Freeware.</p>
-      <a href="https://t.me/savevote" target="_blank" rel="noreferrer">@savevote ↗</a>
     </footer>
     <script>
       const notice = document.querySelector('.vpn-notice');
