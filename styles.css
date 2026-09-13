@@ -22,6 +22,7 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 .tool-card__image,.tool-card__logo{width:184px;height:184px;border-radius:28px;object-fit:cover;flex-shrink:0}
 .tool-card__logo{display:grid;place-items:center;color:#052b65;font-family:cursive;font-weight:700;font-style:italic;font-size:35px;letter-spacing:-.07em}
 .tool-card h3{margin:14px 0 5px;font-size:19px;line-height:1.05;text-wrap:balance}
+.tool-card__vpn{display:inline-block;vertical-align:middle;margin:4px 0;padding:4px 7px;border-radius:999px;background:#fff0cc;color:#704600;font-family:Manrope,Arial,sans-serif;font-size:10px;font-weight:800;line-height:1.2;letter-spacing:0;white-space:nowrap}
 .tool-card p{max-width:225px;font-size:14px;line-height:1.05;text-wrap:balance}
 .tool-card__arrow{position:absolute;right:12px;bottom:9px;opacity:0;transition:opacity .25s}
 .tools__note{color:#74888d;font-size:15px}
