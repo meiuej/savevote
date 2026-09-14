@@ -35,7 +35,7 @@
             <a class="voting-notice__link" href="#umg">
               <span class="voting-notice__date">Умное голосование</span>
               <span class="voting-notice__text">Найдите своего кандидата по одномандатному округу в данных «Умного голосования».</span>
-              <span class="voting-notice__action">Найти кандидата <span aria-hidden="true">↗</span></span>
+              <span class="voting-notice__action">Найти кандидата <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></span>
             </a>
             <button class="voting-notice__close" type="button" aria-label="Закрыть сообщение о поиске кандидата" hidden>×</button>
           </aside>
@@ -91,6 +91,12 @@
               <p>Карта кандидатов от «Яблока» в одномандатных округах.</p>
               <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
             </a>
+            <a class="tool-card" href="#umg">
+              <img class="tool-card__image" src="smart-voting.webp" width="200" height="200" decoding="async" alt="Логотип Умного голосования" />
+              <h3>«Умное голосование» прямо в браузере <span class="permission-badge">Сделано с разрешения команды ФБК</span></h3>
+              <p>Выберите свой округ и посмотрите данные, не покидая страницу.</p>
+              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
+            </a>
           </div>
           <p class="tools__note">Блок постоянно обновляется</p>
         </div>
@@ -137,6 +143,7 @@
               <p>Выберите одномандатный округ, чтобы увидеть данные.</p>
             </div>
             <noscript><p>Для поиска по округу включите JavaScript. <a href="data/umg-2026.json">Открыть данные в формате JSON</a>.</p></noscript>
+            <div class="umg__permission"><span class="permission-badge">Сделано с разрешения команды ФБК</span></div>
             <aside class="umg__notice" aria-labelledby="umg-notice-title">
               <h3 id="umg-notice-title">Актуальные данные — в первоисточнике</h3>
               <p>Сервис использует данные «Умного голосования» от 14 сентября 2026 года и постоянно их обновляет. Однако актуальные данные доступны только в <a href="https://storage.googleapis.com/votesmart/GOSDUMA-2026-UMG.pdf" target="_blank" rel="noopener noreferrer">PDF «Умного голосования»</a> и <a href="https://t.me/smartvotebot" target="_blank" rel="noopener noreferrer">боте @smartvotebot</a>. Советуем сверять информацию с первоисточником.</p>
@@ -239,7 +246,15 @@
       const candidateNotice = document.getElementById('candidate-notice');
       const candidateNoticeClose = candidateNotice.querySelector('button');
       candidateNoticeClose.hidden = false;
-      candidateNoticeClose.addEventListener('click', () => candidateNotice.hidden = true);
+      candidateNoticeClose.addEventListener('click', () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          candidateNotice.hidden = true;
+          return;
+        }
+        candidateNotice.classList.add('voting-notice-slot--closing');
+        candidateNotice.inert = true;
+        window.setTimeout(() => candidateNotice.hidden = true, 400);
+      });
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
