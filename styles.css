@@ -186,3 +186,32 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
   .umg .button{justify-content:center;font-size:21px}.umg__output{padding:20px}
   .umg__output h3{font-size:26px}.umg dl{grid-template-columns:1fr;gap:18px}.umg dd{font-size:22px}
 }
+
+/* Touch-friendly district selection, with optional manual number entry. */
+.umg details{margin-top:16px;min-width:0}
+.umg summary{padding:18px 20px;border:2px solid #548b98;border-radius:20px;color:#245867;cursor:pointer;font-size:22px;line-height:1.3;overflow-wrap:anywhere}
+.umg summary:focus-visible{outline:3px solid #173e69;outline-offset:4px}
+.umg details[open]>summary{margin-bottom:18px;background:var(--pale)}
+.umg__choices{display:grid;gap:8px;max-height:320px;overflow-y:auto;overscroll-behavior:contain;margin-top:14px;padding:5px}
+.umg__choices button,#umg-retry{min-height:52px;border:0;border-radius:14px;padding:16px;background:var(--pale);color:#245867;text-align:left;font:inherit;font-size:20px;line-height:1.3;cursor:pointer;overflow-wrap:anywhere}
+.umg__choices button:hover{background:#d2e9ee}
+#umg-region-search{margin-top:10px}
+#umg-manual>summary{border:0;padding:14px 0;font-size:18px;text-decoration:underline;text-underline-offset:4px}
+#umg-picker-status:not(:empty){margin-top:16px;line-height:1.4}
+#umg-district-picker[hidden],#umg-retry[hidden]{display:none}
+
+/* Short, event-driven motion: no layout animation or permanent compositor layers. */
+@media(prefers-reduced-motion:no-preference){
+  .umg details[open]>.umg__choices{animation:umg-appear .24s ease-out both}
+  .umg__output>h3{animation:umg-appear .28s ease-out both}
+  .umg__output>dl{animation:umg-appear .32s ease-out .04s both}
+  .umg__choices button,.umg summary,#umg-retry{transition:transform .16s ease-out}
+  .umg__choices button:active,.umg summary:active,#umg-retry:active{transform:scale(.985)}
+}
+@keyframes umg-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+@media(prefers-reduced-motion:no-preference){
+  #candidate-notice .voting-notice{animation:notice-arrive .45s ease-out .15s backwards}
+  #candidate-notice .voting-notice__action,#candidate-notice .voting-notice__close{transition:transform .16s ease-out}
+  #candidate-notice .voting-notice__action:active,#candidate-notice .voting-notice__close:active{transform:scale(.97)}
+}

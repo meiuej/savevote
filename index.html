@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260914-7" />
+    <link rel="stylesheet" href="styles.css?v=20260914-10" />
     <script src="countdown.js?v=20260908-1" defer></script>
-    <script src="umg.js?v=20260914-1" defer></script>
+    <script src="umg.js?v=20260914-3" defer></script>
   </head>
   <body>
     <div class="vpn-notice" role="status" aria-live="polite">
@@ -103,9 +103,26 @@
           <div class="umg__heading">
             <p class="eyebrow">Выборы в Государственную думу · 2026</p>
             <h2 id="umg-title">Данные Умного голосования для вашего одномандатного округа</h2>
-            <p class="umg__lead">Укажите номер своего одномандатного избирательного округа, чтобы увидеть запись из базы.</p>
+            <p class="umg__lead">Выберите регион, затем свой одномандатный округ, чтобы увидеть запись из базы.</p>
           </div>
           <div class="umg__panel">
+            <div id="umg-picker">
+              <details id="umg-regions">
+                <summary id="umg-region-label">1. Выбрать регион</summary>
+                <label for="umg-region-search">Поиск региона</label>
+                <input id="umg-region-search" type="search" placeholder="Название региона" autocomplete="off" />
+                <div id="umg-region-list" class="umg__choices"></div>
+              </details>
+              <p class="umg__hint">Регион сокращает список. Выберите конкретный округ — только после этого появятся данные кандидата. В списке представлены округа из базы.</p>
+              <details id="umg-district-picker" hidden>
+                <summary id="umg-district-label">2. Выбрать округ</summary>
+                <div id="umg-district-list" class="umg__choices"></div>
+              </details>
+              <p id="umg-picker-status" role="status"></p>
+              <button id="umg-retry" type="button" hidden>Повторить загрузку</button>
+            </div>
+            <details id="umg-manual">
+              <summary>Ввести номер округа</summary>
             <form id="umg-form">
               <label for="umg-district">Номер одномандатного округа</label>
               <p id="umg-hint" class="umg__hint">Например, 196 — Кунцевский. Введите номер или выберите округ из подсказок. Это номер округа, а не избирательного участка.</p>
@@ -115,6 +132,7 @@
                 <button class="button" type="submit">Показать данные</button>
               </div>
             </form>
+            </details>
             <div id="umg-output" class="umg__output" role="status" aria-live="polite" aria-atomic="true">
               <p>Выберите одномандатный округ, чтобы увидеть данные.</p>
             </div>
