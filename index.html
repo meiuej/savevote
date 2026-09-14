@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260914-3" />
+    <link rel="stylesheet" href="styles.css?v=20260914-5" />
     <script src="countdown.js?v=20260908-1" defer></script>
+    <script src="umg.js?v=20260914-1" defer></script>
   </head>
   <body>
     <div class="vpn-notice" role="status" aria-live="polite">
@@ -84,6 +85,36 @@
       </section>
 
       </div>
+
+      <section class="umg" id="umg" aria-labelledby="umg-title">
+        <div class="container umg__inner">
+          <div class="umg__heading">
+            <p class="eyebrow">Выборы в Государственную думу · 2026</p>
+            <h2 id="umg-title">Данные Умного голосования для вашего одномандатного округа</h2>
+            <p class="umg__lead">Укажите номер своего одномандатного избирательного округа, чтобы увидеть запись из базы.</p>
+          </div>
+          <div class="umg__panel">
+            <form id="umg-form">
+              <label for="umg-district">Номер одномандатного округа</label>
+              <p id="umg-hint" class="umg__hint">Например, 196 — Кунцевский. Введите номер или выберите округ из подсказок. Это номер округа, а не избирательного участка.</p>
+              <div class="umg__controls">
+                <input id="umg-district" name="district" type="text" inputmode="numeric" list="umg-districts" autocomplete="off" aria-describedby="umg-hint" placeholder="Например, 196" />
+                <datalist id="umg-districts"></datalist>
+                <button class="button" type="submit">Показать данные</button>
+              </div>
+            </form>
+            <div id="umg-output" class="umg__output" role="status" aria-live="polite" aria-atomic="true">
+              <p>Выберите одномандатный округ, чтобы увидеть данные.</p>
+            </div>
+            <noscript><p>Для поиска по округу включите JavaScript. <a href="data/umg-2026.json">Открыть данные в формате JSON</a>.</p></noscript>
+            <aside class="umg__notice" aria-labelledby="umg-notice-title">
+              <h3 id="umg-notice-title">Актуальные данные — в первоисточнике</h3>
+              <p>Сервис использует данные «Умного голосования» от 14 сентября 2026 года и постоянно их обновляет. Однако актуальные данные доступны только в <a href="https://storage.googleapis.com/votesmart/GOSDUMA-2026-UMG.pdf" target="_blank" rel="noopener noreferrer">PDF «Умного голосования»</a> и <a href="https://t.me/smartvotebot" target="_blank" rel="noopener noreferrer">боте @smartvotebot</a>. Советуем сверять информацию с первоисточником.</p>
+            </aside>
+            <p class="umg__disclaimer">Блок автоматически отображает информацию из базы данных Умного голосования для выбранного одномандатного округа. Сайт не изменяет и не формирует эти данные самостоятельно. Решение о голосовании пользователь принимает самостоятельно.</p>
+          </div>
+        </div>
+      </section>
 
       <section class="countdown" aria-labelledby="countdown-title">
         <div class="container">
