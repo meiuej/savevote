@@ -29,6 +29,7 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 .tools__note{color:#74888d;font-size:15px}
 .countdown{padding:60px 0 30px;text-align:center}
 .countdown h2{font-size:clamp(40px,5vw,72px)}
+.countdown__lead{margin:24px 0 0;font-size:clamp(26px,3.5vw,44px);line-height:1.2}
 .countdown__timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;width:min(100%,850px);margin:40px auto 0;padding:28px;border-radius:44px;background:var(--blue)}
 .countdown__timer[hidden]{display:none}
 .countdown__unit{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:18px 8px 16px;border-radius:30px;background:#c8f7ff}
@@ -124,8 +125,8 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 .voting-notice-slot[hidden]{display:none}
 .voting-notice-slot__inner{min-height:0;overflow:hidden}
 .voting-notice-slot .voting-notice{margin:18px 0 8px}
-#candidate-notice .voting-notice__action{white-space:normal}
-#candidate-notice .voting-notice__close[hidden]{display:none}
+.voting-notice-slot .voting-notice__action{white-space:normal}
+.voting-notice-slot .voting-notice__close[hidden]{display:none}
 @media(prefers-reduced-motion:no-preference){
 .voting-notice-slot--enter{animation:notice-space .55s cubic-bezier(.22,1,.36,1) .35s both}
 .voting-notice-slot--enter .voting-notice{animation:notice-arrive .55s ease-out .35s both}
@@ -214,15 +215,36 @@ p{line-height:1.2}a:focus-visible,button:focus-visible,.faq__viewport:focus-visi
 @keyframes umg-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 @media(prefers-reduced-motion:no-preference){
-  #candidate-notice{animation:notice-space .7s cubic-bezier(.22,1,.36,1) .15s both}
-  #candidate-notice .voting-notice{animation:notice-arrive .7s cubic-bezier(.22,1,.36,1) .15s both}
-  #candidate-notice.voting-notice-slot--closing{animation:notice-collapse .4s ease-in-out both}
-  #candidate-notice.voting-notice-slot--closing .voting-notice{animation:notice-dismiss .25s ease-in both}
-  #candidate-notice .arrow-icon{transition:transform .2s ease-out}
-  #candidate-notice .voting-notice__link:hover .arrow-icon{transform:translate(2px,-2px)}
-  #candidate-notice .voting-notice__action,#candidate-notice .voting-notice__close{transition:transform .16s ease-out}
-  #candidate-notice .voting-notice__action:active,#candidate-notice .voting-notice__close:active{transform:scale(.97)}
+  .voting-notice-slot{animation:notice-space .7s cubic-bezier(.22,1,.36,1) .15s both}
+  .voting-notice-slot .voting-notice{animation:notice-arrive .7s cubic-bezier(.22,1,.36,1) .15s both}
+  .voting-notice-slot.voting-notice-slot--closing{animation:notice-collapse .4s ease-in-out both}
+  .voting-notice-slot.voting-notice-slot--closing .voting-notice{animation:notice-dismiss .25s ease-in both}
+  .voting-notice-slot .arrow-icon{transition:transform .2s ease-out}
+  .voting-notice-slot .voting-notice__link:hover .arrow-icon{transform:translate(2px,-2px)}
+  .voting-notice-slot .voting-notice__action,.voting-notice-slot .voting-notice__close{transition:transform .16s ease-out}
+  .voting-notice-slot .voting-notice__action:active,.voting-notice-slot .voting-notice__close:active{transform:scale(.97)}
 }
 
 @keyframes notice-collapse{from{grid-template-rows:1fr}to{grid-template-rows:0fr}}
 @keyframes notice-dismiss{to{opacity:0;transform:translateY(-12px)}}
+
+/* Navigation appears once the opening hero has scrolled out of view. */
+section[id]{scroll-margin-top:96px}
+.site-nav{position:fixed;inset:0 0 auto;z-index:100;background:#fff;color:#245867;border-bottom:1px solid #d2e9ee;box-shadow:0 6px 24px #24586714;padding-top:env(safe-area-inset-top)}
+.site-nav[hidden],.site-nav__links[hidden]{display:none}
+.site-nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.site-nav__brand{font-size:24px;text-decoration:none;white-space:nowrap}
+.site-nav__links{display:flex;align-items:center;gap:6px}
+.site-nav__links a{display:flex;align-items:center;min-height:44px;padding:10px;border-radius:12px;font-size:17px;text-decoration:none}
+.site-nav__links a:hover{background:var(--pale)}
+.site-nav__toggle{display:none;align-items:center;gap:12px;min-height:44px;padding:10px 14px;border:0;border-radius:12px;background:var(--pale);color:#245867;font-size:18px;cursor:pointer}
+@media(prefers-reduced-motion:no-preference){.site-nav{animation:nav-arrive .22s ease-out both}}
+@keyframes nav-arrive{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){
+  .site-nav__inner{flex-wrap:wrap;gap:0 12px;min-height:68px}
+  .site-nav__brand{font-size:22px}
+  .site-nav__toggle{display:inline-flex}
+  .site-nav__links{flex-basis:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:8px 0 16px;max-height:calc(100dvh - 84px - env(safe-area-inset-top));overflow-y:auto}
+  .site-nav__links a{font-size:18px;padding:12px;background:var(--pale)}
+}
+@media(max-width:380px){.site-nav__links{grid-template-columns:1fr}.site-nav__brand{font-size:20px}}

@@ -5,7 +5,7 @@
   const deadline = Date.parse(timer.dataset.deadline);
   if (!Number.isFinite(deadline)) return;
 
-  const title = document.getElementById('countdown-title');
+  const lead = document.getElementById('countdown-lead');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const units = [
     { name: 'days', seconds: 86400, forms: ['день', 'дня', 'дней'] },
@@ -76,8 +76,8 @@
     });
     timer.hidden = false;
     if (finished) {
-      title.textContent = 'Время голосовать';
-      timer.setAttribute('aria-label', '20 сентября 2026 года, 08:00 по Москве — отсчёт завершён');
+      lead.textContent = '«Полдень за мир» наступил!';
+      timer.setAttribute('aria-label', '20 сентября 2026 года, 12:00 по Москве — отсчёт завершён');
       return;
     }
     window.setTimeout(update, 1000);

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Редактор новостей — Сохранить Голос</title>
+  <style>body{margin:0;font:16px/1.5 Arial,sans-serif;color:#245867;background:#e8f4f6}#setup{max-width:640px;margin:12vh auto;padding:32px;background:white;border-radius:24px}a{color:inherit}button{font:inherit;padding:12px 20px;border:0;border-radius:12px;background:#245867;color:white;cursor:pointer}</style>
+</head>
+<body>
+  <main id="setup">
+    <h1>Редактор новостей</h1>
+    <p>Публикация на сайт пока не подключена: осталось настроить вход через GitHub.</p>
+    <p>Вы можете попробовать редактор в деморежиме. Демоновости не попадают на сайт и исчезают после перезагрузки страницы.</p>
+    <button id="demo" type="button">Попробовать редактор</button>
+    <p><a href="/news/">Перейти к новостям</a></p>
+    <p id="error" role="alert"></p>
+  </main>
+  <script>window.CMS_MANUAL_INIT = true;</script>
+  <script src="https://unpkg.com/decap-cms@3.8.3/dist/decap-cms.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
