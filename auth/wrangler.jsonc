@@ -3,5 +3,11 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-09-18",
   "workers_dev": true,
-  "observability": { "enabled": false }
+  "observability": {
+    "enabled": false
+  },
+  "account_id": "cab45f9c6c69ff7eaeeb452f0132bf47",
+  "vars": {
+    "GITHUB_CLIENT_ID": "Ov23liYL27yNgxWkxpl1"
+  }
 }

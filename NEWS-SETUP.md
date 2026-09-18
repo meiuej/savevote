@@ -4,7 +4,7 @@
 
 - `scripts/build-news.py` собирает сайт в `_site`, без сторонних Python-пакетов.
 - `/news/` — список новостей, `/news/<имя-файла>/` — отдельная новость.
-- `/admin/` — Decap CMS на русском. Пока авторизация не подключена, показана кнопка деморежима. В деморежиме данные исчезают после перезагрузки и не публикуются.
+- `/admin/` — Decap CMS на русском. Подключается GitHub OAuth через Cloudflare Worker `savevote-cms-auth.lobodatim.workers.dev`. В деморежиме данные исчезают после перезагрузки и не публикуются.
 - Новости хранятся в `content/news/*.json`, изображения — `uploads/news/`.
 - Текст в первой версии — обычные абзацы, без HTML и форматирования. Разделяйте абзацы пустой строкой.
 - Workflow `.github/workflows/pages.yml` пересобирает сайт при изменениях в main. Сам по себе локальный файл workflow ничего не публикует.
@@ -52,3 +52,14 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory _site
 Worker запрашивает GitHub OAuth scope `public_repo`, который распространяется на публичные репозитории аккаунта, а не только на этот сайт. При первом входе GitHub покажет запрос доступа; решение принимает владелец. Worker дополнительно проверяет право записи именно в `meiuej/savevote`. Он не хранит токены, не пишет журналы приложения и передаёт токен только окну `https://vote.chenterce.info`.
 
 Проверка: `node --test auth/worker.test.mjs`. Настоящий вход требует проверки после развёртывания; локальные тесты используют подставные ответы GitHub.
+
+## Настроенные адреса
+
+- Сайт: https://vote.chenterce.info
+- Новости: https://vote.chenterce.info/news/
+- Редактор: https://vote.chenterce.info/admin/
+- OAuth Worker: https://savevote-cms-auth.lobodatim.workers.dev
+- GitHub OAuth App: https://github.com/settings/applications/3866640
+- GitHub Pages переключён на GitHub Actions; первая сборка прошла успешно.
+- GITHUB_CLIENT_ID указан в конфигурации Worker. Секрет задаётся владельцем в Cloudflare как Secret.
+- При истечении GitHub-токена может потребоваться выйти из редактора и войти снова.

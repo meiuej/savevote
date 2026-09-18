@@ -1,5 +1,5 @@
 // Set this to the deployed OAuth service URL after configuring GitHub login.
-const authBaseUrl = '';
+const authBaseUrl = 'https://savevote-cms-auth.lobodatim.workers.dev';
 async function startEditor(demo) {
   if (!window.CMS) {
     document.getElementById('error').textContent = 'Не удалось загрузить редактор. Проверьте подключение и обновите страницу.';
