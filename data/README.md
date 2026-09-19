@@ -1,13 +1,13 @@
 # Данные Умного голосования — 2026
 
 `umg-2026.json` получен только из листа «Кандидаты» файла
-`GOSDUMA-2026-UMG.xlsx`. Ключ — номер одномандатного округа.
+`GOSDUMA-2026-UMG-updated.xlsx`. Ключ — номер одномандатного округа.
 Контрольная сумма исходного XLSX и число записей — в `umg-2026-source.json`.
 
 Для обновления установите Python и `openpyxl`, затем из корня проекта выполните:
 
 ```sh
-python3 scripts/import-umg.py /path/to/GOSDUMA-2026-UMG.xlsx
+python3 scripts/import-umg.py /path/to/GOSDUMA-2026-UMG-updated.xlsx
 ```
 
 Импорт проверяет заголовки, обязательные поля и уникальность номеров;
