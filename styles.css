@@ -1,4 +1,48 @@
 @font-face{font-family:BIM;src:url('BIM.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+.post-election .hero__inner{min-height:560px;padding:80px 0 64px}
+.post-election__brand{margin-bottom:42px;font-size:24px}
+body.post-election{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;background:#347d94;color:#fff}
+.post-election::before,.post-election::after{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none}
+.post-election::before{background:radial-gradient(ellipse at 25% 35%,#62aeb8 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,#285e85 0%,transparent 60%);opacity:.8}
+.post-election::after{background:radial-gradient(ellipse at 75% 25%,#73bbc2 0%,transparent 50%),radial-gradient(ellipse at 20% 85%,#326f97 0%,transparent 55%);opacity:.45}
+.post-election .intro,.post-election .socials{background:transparent}
+.post-election .socials{padding:36px 0 48px}
+.post-election .socials h2{font-size:clamp(40px,5vw,64px)}
+.post-election .socials__links{max-width:1000px;margin-inline:auto}
+.post-election .socials__links a{min-width:0;background:#ffffffed;font-size:clamp(23px,3vw,30px)}
+.post-election .socials__links a>span:first-child{min-width:0}
+.post-election .footer{color:#fff;border-top:1px solid #ffffff40;padding-block:28px 36px}
+.post-election .footer__legal{max-width:1000px;font-family:Manrope,Arial,sans-serif;font-size:12px;line-height:1.65}
+.post-election .site-nav{background:#245867ed;color:#fff;border-color:#ffffff30;box-shadow:none;backdrop-filter:blur(16px)}
+.post-election .site-nav__links a:hover{background:#ffffff20}
+.post-election__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:32px}
+.post-election .post-election__actions .button{margin:0;min-height:60px}
+.post-election .post-election__donate{background:#245867;color:#fff;border:1px solid #ffffff70}
+.post-election a:focus-visible,.post-election button:focus-visible{outline-color:#fff}
+@media(max-width:1100px){.post-election .site-nav__links a{background:#ffffff18}}
+@media(max-width:700px){.post-election .socials__links{max-width:440px}.post-election__actions{max-width:440px;margin-inline:auto;flex-direction:column}.post-election .post-election__actions .button{width:100%;font-size:20px;gap:12px}.post-election .hero h1{font-size:clamp(44px,11.5vw,76px)}.post-election .socials{padding:24px 0 36px}.post-election .footer__legal{font-size:11px}.post-election .socials__links a{padding:22px}}
+.post-election .hero{border:0}
+@media(prefers-reduced-motion:no-preference){
+  .post-election::before{animation:gradient-flow 7s ease-in-out infinite alternate}
+  .post-election::after{animation:gradient-flow 10s ease-in-out -4s infinite alternate-reverse}
+  .post-election .hero__copy{animation:none}
+  .post-election .hero__copy>*{animation:post-election-arrive .8s cubic-bezier(.22,1,.36,1) both}
+  .post-election .hero__copy>:nth-child(2){animation-delay:.1s}
+  .post-election .hero__copy>:nth-child(3){animation-delay:.2s}
+  .post-election .hero__copy>:nth-child(4){animation-delay:.3s}
+  .post-election .hero__copy>:nth-child(5){animation-delay:.4s}
+  .post-election .socials{animation:post-election-arrive .9s ease-out .45s both}
+}
+@keyframes gradient-flow{0%{transform:translate(-5%,-3%) scale(1);opacity:.45}50%{transform:translate(4%,5%) scale(1.08);opacity:.75}100%{transform:translate(6%,-4%) scale(1.02);opacity:.6}}
+@keyframes post-election-arrive{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+.post-election .hero h1{font-size:clamp(44px,9vw,116px);line-height:1.05}
+.post-election .hero__lead{font-size:clamp(28px,4vw,48px);margin-top:24px}
+.post-election__note{max-width:620px;margin:24px auto 0;font-family:Manrope,Arial,sans-serif;font-size:17px;line-height:1.6}
+.post-election .post-election__button{margin-top:32px;background:#fff;color:#245867;gap:24px;max-width:100%;text-align:left}
+.post-election .tools__cards{grid-template-columns:repeat(3,minmax(0,1fr));max-width:940px}
+.post-election .tools__heading h2{font-size:clamp(44px,6vw,76px)}
+.post-election .tools__heading p{font-size:clamp(20px,2.5vw,28px)}
+@media(max-width:700px){.post-election .hero__inner{min-height:0;padding:56px 0 48px}.post-election__brand{font-size:20px;margin-bottom:36px}.post-election__note{font-size:15px}.post-election .post-election__button{font-size:20px;padding:18px 20px}.post-election .tools__cards{grid-template-columns:repeat(2,minmax(0,1fr))}.post-election .tool-card:nth-child(n){order:0}}
 :root{--blue:#52a7bb;--pale:#e8f4f6;--ink:#101010;--paper:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}

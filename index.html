@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Сохрани голос — памятка: проверьте округ и кандидатов, голосуйте лично и выбирайте сами." />
+    <meta name="description" content="Выборы прошли. Скоро мы подведём итоги. Сообщите о нарушениях и следите за обновлениями проекта «Сохранить голос»." />
     <title>Сохрани голос</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260918-2" />
+    <link rel="stylesheet" href="styles.css?v=20260920-3" />
     <script src="navigation.js?v=20260918-2" defer></script>
-    <script src="countdown.js?v=20260918-1" defer></script>
-    <script src="umg.js?v=20260914-3" defer></script>
   </head>
-  <body>
+  <body class="post-election">
     <div class="vpn-notice" role="status" aria-live="polite">
       <span class="vpn-notice__dot" aria-hidden="true"></span>
       <span>Для стабильной работы сайта может понадобиться VPN.</span>
@@ -24,12 +22,9 @@
         <a class="site-nav__brand" href="#top">Сохранить Голос</a>
         <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Меню <span aria-hidden="true">☰</span></button>
         <div class="site-nav__links" id="site-nav-links">
-          <a href="#tools">Инструменты</a>
-          <a href="#umg">Найти кандидата</a>
-          <a href="#countdown">Полдень за мир</a>
-          <a href="#faq">Вопросы</a>
-          <a href="#help">Сообщить о нарушении</a>
-          <a href="#support">Поддержать</a>
+          <a href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">Сообщить о нарушениях</a>
+          <a href="#socials">Соцсети</a>
+          <a href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noopener noreferrer">Пожертвовать</a>
         </div>
       </nav>
     </header>
@@ -38,220 +33,21 @@
       <section class="hero">
         <div class="container hero__inner">
           <div class="hero__copy">
-            <h1>Сохранить<br />Голос</h1>
-            <p class="hero__lead">Несколько простых действий помогут сделать голосование спокойным, личным и честным.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="container voting-notice-slot" id="violation-notice">
-        <div class="voting-notice-slot__inner">
-          <aside class="voting-notice" aria-label="Сообщить о нарушении или принуждении к голосованию">
-            <a class="voting-notice__link" href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">
-              <span class="voting-notice__date">Сообщить о нарушении</span>
-              <span class="voting-notice__text">Если вы заметили нарушение на избирательном участке или вас заставляют голосовать — напишите нам.</span>
-              <span class="voting-notice__action">Написать в бот <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></span>
-            </a>
-            <button class="voting-notice__close" type="button" aria-label="Закрыть сообщение о нарушениях" hidden>×</button>
-          </aside>
-        </div>
-      </div>
-
-      <div class="container voting-notice-slot" id="candidate-notice">
-        <div class="voting-notice-slot__inner">
-          <aside class="voting-notice" aria-label="Поиск кандидата по одномандатному округу">
-            <a class="voting-notice__link" href="#umg">
-              <span class="voting-notice__date">Умное голосование</span>
-              <span class="voting-notice__text">Найдите своего кандидата по одномандатному округу в данных «Умного голосования».</span>
-              <span class="voting-notice__action">Найти кандидата <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></span>
-            </a>
-            <button class="voting-notice__close" type="button" aria-label="Закрыть сообщение о поиске кандидата" hidden>×</button>
-          </aside>
-        </div>
-      </div>
-
-      <section id="tools" class="tools reveal" aria-labelledby="tools-title">
-        <div class="container tools__inner">
-          <div class="tools__heading">
-            <h2 id="tools-title">Полезные<br />инструменты</h2>
-            <p>Здесь мы собрали сервисы, которые помогут проголосовать правильно и честно.</p>
-          </div>
-          <div class="tools__cards">
-            <a class="tool-card" href="https://t.me/smartvotebot" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="smart-voting.webp" width="200" height="200" decoding="async" alt="Логотип Умного голосования" />
-              <h3>«Умное голосование» <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Бот для выбора более оппозиционного кандидата в одномандатном округе.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://galochka.info" target="_blank" rel="noreferrer">
-              <span class="tool-card__logo" aria-hidden="true">Галочка</span>
-              <h3>«Галочка» <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Инструменты для тех, кого лишают выбора.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://iditena.org" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="idite-na.webp" width="200" height="200" decoding="async" alt="Максим Кац" />
-              <h3>«Идите на»</h3>
-              <p>Сайт Максима Каца с характеристиками кандидатов и его личным мнением.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://t.me/votespravkabot" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="photo_2026-09-04_15-58-43.webp" width="400" height="400" decoding="async" alt="Логотип бота «Выборы — справка»" />
-              <h3>«Выборы | FAQ | Шаблоны жалоб» <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Бот со справочной информацией о выборах, ответами на вопросы и шаблонами жалоб.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://t.me/MirnyeNablyudateliBot" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="mirnye-nablyudateli.webp" width="400" height="400" decoding="async" alt="Логотип «Мирные наблюдатели»" loading="lazy" />
-              <h3>«Мирные наблюдатели» <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Telegram-бот проекта «Мирные наблюдатели».</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://gd2026.antiwarcommittee.info/" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="antiwar-committee.webp" width="400" height="400" decoding="async" alt="Логотип Антивоенного Комитета России" loading="lazy" />
-              <h3>Досье на кандидатов <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Досье на кандидатов от Антивоенного Комитета России.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="https://progressmovement.org/elections" target="_blank" rel="noreferrer">
-              <img class="tool-card__image" src="progress-map.webp" width="400" height="400" decoding="async" alt="Логотип движения «Прогресс»" loading="lazy" />
-              <h3>Карта одномандатников от «Яблока» <span class="tool-card__vpn">Нужен ВПН</span></h3>
-              <p>Карта кандидатов от «Яблока» в одномандатных округах.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-            <a class="tool-card" href="#umg">
-              <img class="tool-card__image" src="smart-voting.webp" width="200" height="200" decoding="async" alt="Логотип Умного голосования" />
-              <h3>«Умное голосование» прямо в браузере <span class="permission-badge">Сделано с разрешения команды ФБК</span></h3>
-              <p>Выберите свой округ и посмотрите данные, не покидая страницу.</p>
-              <span class="tool-card__arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span>
-            </a>
-          </div>
-          <p class="tools__note">Блок постоянно обновляется</p>
-        </div>
-      </section>
-
-      </div>
-
-      <section class="umg" id="umg" aria-labelledby="umg-title">
-        <div class="container umg__inner">
-          <div class="umg__heading">
-            <p class="eyebrow">Выборы в Государственную думу · 2026</p>
-            <h2 id="umg-title">Данные Умного голосования для вашего одномандатного округа</h2>
-            <p class="umg__lead">Выберите регион, затем свой одномандатный округ, чтобы увидеть запись из базы.</p>
-          </div>
-          <div class="umg__panel">
-            <div id="umg-picker">
-              <details id="umg-regions">
-                <summary id="umg-region-label">1. Выбрать регион</summary>
-                <label for="umg-region-search">Поиск региона</label>
-                <input id="umg-region-search" type="search" placeholder="Название региона" autocomplete="off" />
-                <div id="umg-region-list" class="umg__choices"></div>
-              </details>
-              <p class="umg__hint">Регион сокращает список. Выберите конкретный округ — только после этого появятся данные кандидата. В списке представлены округа из базы.</p>
-              <details id="umg-district-picker" hidden>
-                <summary id="umg-district-label">2. Выбрать округ</summary>
-                <div id="umg-district-list" class="umg__choices"></div>
-              </details>
-              <p id="umg-picker-status" role="status"></p>
-              <button id="umg-retry" type="button" hidden>Повторить загрузку</button>
-            </div>
-            <details id="umg-manual">
-              <summary>Ввести номер округа</summary>
-            <form id="umg-form">
-              <label for="umg-district">Номер одномандатного округа</label>
-              <p id="umg-hint" class="umg__hint">Например, 196 — Кунцевский. Введите номер или выберите округ из подсказок. Это номер округа, а не избирательного участка.</p>
-              <div class="umg__controls">
-                <input id="umg-district" name="district" type="text" inputmode="numeric" list="umg-districts" autocomplete="off" aria-describedby="umg-hint" placeholder="Например, 196" />
-                <datalist id="umg-districts"></datalist>
-                <button class="button" type="submit">Показать данные</button>
-              </div>
-            </form>
-            </details>
-            <div id="umg-output" class="umg__output" role="status" aria-live="polite" aria-atomic="true">
-              <p>Выберите одномандатный округ, чтобы увидеть данные.</p>
-            </div>
-            <noscript><p>Для поиска по округу включите JavaScript. <a href="data/umg-2026.json">Открыть данные в формате JSON</a>.</p></noscript>
-            <div class="umg__permission"><span class="permission-badge">Сделано с разрешения команды ФБК</span></div>
-            <aside class="umg__notice" aria-labelledby="umg-notice-title">
-              <h3 id="umg-notice-title">Актуальные данные — в первоисточнике</h3>
-              <p>Данные «Умного голосования» на сайте обновлены 19 сентября 2026 года. Однако актуальные данные доступны только в <a href="https://storage.googleapis.com/votesmart/GOSDUMA-2026-UMG.pdf" target="_blank" rel="noopener noreferrer">PDF «Умного голосования»</a> и <a href="https://t.me/smartvotebot" target="_blank" rel="noopener noreferrer">боте @smartvotebot</a>. Советуем сверять информацию с первоисточником.</p>
-            </aside>
-            <p class="umg__disclaimer">Блок автоматически отображает информацию из базы данных Умного голосования для выбранного одномандатного округа. Сайт не изменяет и не формирует эти данные самостоятельно. Решение о голосовании пользователь принимает самостоятельно.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="countdown" class="countdown" aria-labelledby="countdown-title">
-        <div class="container">
-          <h2 id="countdown-title">Трёхдневные выборы<br />уже начались!</h2>
-          <p class="countdown__lead" id="countdown-lead">Но до «Полдня за мир»<br />осталось ещё…</p>
-          <div class="countdown__timer" role="timer" aria-live="off" aria-label="До «Полдня за мир» — 20 сентября 2026 года, 12:00 по Москве" data-deadline="2026-09-20T12:00:00+03:00" hidden>
-            <div class="countdown__unit"><span class="countdown__value" data-value="days">00</span><span class="countdown__label" data-label="days">дней</span></div>
-            <div class="countdown__unit"><span class="countdown__value" data-value="hours">00</span><span class="countdown__label" data-label="hours">часов</span></div>
-            <div class="countdown__unit"><span class="countdown__value" data-value="minutes">00</span><span class="countdown__label" data-label="minutes">минут</span></div>
-            <div class="countdown__unit"><span class="countdown__value" data-value="seconds">00</span><span class="countdown__label" data-label="seconds">секунд</span></div>
-          </div>
-          <p class="countdown__date"><time datetime="2026-09-20T12:00:00+03:00">20 сентября 2026, 12:00 МСК</time></p>
-        </div>
-      </section>
-
-      <section id="faq" class="faq reveal" aria-labelledby="faq-title">
-        <div class="container faq__grid">
-          <div>
-            <p class="eyebrow">Короткие ответы</p>
-            <h2 id="faq-title">Есть<br />вопросы?</h2>
-          </div>
-          <div class="faq__list">
-            <article class="faq-card">
-              <h3>За кого голосовать?</h3>
-              <p>По одномандатному округу можно ориентироваться на кандидата от «Яблока» или на рекомендацию «Умного голосования», когда она появится. С федеральным списком пока всё неясно — следите за обновлениями ближе к голосованию. Окончательный выбор остаётся за вами.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Что делать, если меня принуждают?</h3>
-              <p>По возможности зафиксируйте, что произошло, где и когда. Сообщить о ситуации можно через наш бот или по горячей линии ЦИК, указанные ниже.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Когда приходить голосовать?</h3>
-              <p>Приходите голосовать лично 20 сентября после обеда. Перед визитом проверьте часы работы своего участка.</p>
-            </article>
-            <article class="faq-card">
-              <h3>Нужно ли показывать свой бюллетень?</h3>
-              <p>Нет. Голосование тайное, и вы не обязаны сообщать или доказывать кому-либо свой выбор.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="help reveal" id="help">
-        <div class="container help__grid">
-          <div>
-            <p class="eyebrow">Если заметил нарушение</p>
-            <h2>Зафиксируй.<br />Сообщи.</h2>
-          </div>
-          <div class="help__body">
-            <p>Запиши, что произошло, где и когда. Если тебя принуждают подтвердить свой выбор или ты заметил возможное нарушение, сохрани основные обстоятельства.</p>
-            <div class="contacts">
-              <a href="https://t.me/savemyvote_bot" target="_blank" rel="noreferrer"><small>Бот для сообщений</small>@savemyvote_bot <span><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
-              <a href="tel:88002000020"><small>Горячая линия ЦИКа</small>8 800 200-00-20 <span><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+            <p class="post-election__brand">Сохранить Голос</p>
+            <h1>Выборы прошли</h1>
+            <p class="hero__lead">Скоро мы подведём итоги.</p>
+            <p class="post-election__note">Следите за обновлениями в наших соцсетях. Если вы столкнулись с нарушениями — напишите нам.</p>
+            <div class="post-election__actions">
+              <a class="button post-election__button" href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">Сообщить о нарушениях <span aria-hidden="true">↗</span></a>
+              <a class="button post-election__donate" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noopener noreferrer">Пожертвовать <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="support" class="support reveal" aria-labelledby="support-title">
-        <div class="container support__inner">
-          <div>
-            <p class="eyebrow">Поддержка проекта</p>
-            <h2 id="support-title">Поддержать<br />проект</h2>
-          </div>
-          <div class="support__body">
-            <p>«Сохранить голос» — независимый медиапроект Центра Ц. Если хотите, вы можете помочь нам продолжать работу.</p>
-            <a class="button button--support" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noreferrer">Поддержать <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
-          </div>
-        </div>
-      </section>
+      </div>
 
-      <section class="socials reveal" aria-labelledby="socials-title">
+      <section id="socials" class="socials" aria-labelledby="socials-title">
         <div class="container">
           <h2 id="socials-title">Соцсети</h2>
           <nav class="socials__links" aria-label="Соцсети и связь">
@@ -272,52 +68,6 @@
       document.querySelector('.vpn-notice__close').addEventListener('click', () => notice.hidden = true);
       window.setTimeout(() => notice.hidden = true, 5000);
 
-      document.querySelectorAll('.voting-notice-slot').forEach((votingNotice) => {
-        const closeButton = votingNotice.querySelector('.voting-notice__close');
-        closeButton.hidden = false;
-        closeButton.addEventListener('click', () => {
-          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            votingNotice.hidden = true;
-            return;
-          }
-          votingNotice.classList.add('voting-notice-slot--closing');
-          votingNotice.inert = true;
-          window.setTimeout(() => votingNotice.hidden = true, 400);
-        });
-      });
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal--visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
-
-      // Repeat the existing answers for a seamless mobile loop, without new content.
-      const list = document.querySelector('.faq__list');
-      const track = document.createElement('div');
-      track.className = 'faq__track';
-      list.before(track);
-      track.append(list);
-      const copy = list.cloneNode(true);
-      copy.setAttribute('aria-hidden', 'true');
-      copy.inert = true;
-      copy.classList.add('faq__list--copy');
-      track.append(copy);
-      const viewport = document.createElement('div');
-      viewport.className = 'faq__viewport';
-      viewport.tabIndex = 0;
-      viewport.setAttribute('role', 'region');
-      viewport.setAttribute('aria-label', 'Вопросы и ответы');
-      track.before(viewport);
-      viewport.append(track);
-      // Pause while a reader touches or focuses the answers.
-      viewport.addEventListener('pointerdown', () => viewport.classList.add('is-paused'));
-      viewport.addEventListener('pointerleave', () => viewport.classList.remove('is-paused'));
-      viewport.addEventListener('blur', () => viewport.classList.remove('is-paused'));
     </script>
   </body>
 </html>
