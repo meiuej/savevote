@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Выборы прошли. Скоро мы подведём итоги. Сообщите о нарушениях и следите за обновлениями проекта «Сохранить голос»." />
+    <meta name="description" content="Предварительные результаты выборов в Госдуму 2026 по партийным спискам. Данные, логотипы партий и ссылка на источник — проект «Сохранить голос»." />
     <title>Сохрани голос</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260920-3" />
+    <link rel="stylesheet" href="styles.css?v=20260922-4" />
     <script src="navigation.js?v=20260918-2" defer></script>
   </head>
   <body class="post-election">
@@ -22,6 +22,8 @@
         <a class="site-nav__brand" href="#top">Сохранить Голос</a>
         <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">Меню <span aria-hidden="true">☰</span></button>
         <div class="site-nav__links" id="site-nav-links">
+          <a href="#statement">Заявление проекта</a>
+          <a href="#results">Результаты выборов</a>
           <a href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">Сообщить о нарушениях</a>
           <a href="#socials">Соцсети</a>
           <a href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noopener noreferrer">Пожертвовать</a>
@@ -35,17 +37,115 @@
           <div class="hero__copy">
             <p class="post-election__brand">Сохранить Голос</p>
             <h1>Выборы прошли</h1>
-            <p class="hero__lead">Скоро мы подведём итоги.</p>
+            <p class="hero__lead">Первые результаты голосования.</p>
             <p class="post-election__note">Следите за обновлениями в наших соцсетях. Если вы столкнулись с нарушениями — напишите нам.</p>
             <div class="post-election__actions">
-              <a class="button post-election__button" href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">Сообщить о нарушениях <span aria-hidden="true">↗</span></a>
-              <a class="button post-election__donate" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noopener noreferrer">Пожертвовать <span aria-hidden="true">↗</span></a>
+              <a class="button post-election__button" href="https://t.me/savemyvote_bot" target="_blank" rel="noopener noreferrer">Сообщить о нарушениях <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
+              <a class="button post-election__donate" href="https://chenterce.info/centre-ts-donate.html" target="_blank" rel="noopener noreferrer">Пожертвовать <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></span></a>
             </div>
           </div>
         </div>
       </section>
 
       </div>
+
+      <section id="statement" class="project-statement" aria-labelledby="statement-title">
+        <div class="container project-statement__inner">
+          <p class="project-statement__label">Заявление проекта «Сохранить голос»</p>
+          <h2 id="statement-title">Мы не признаём эти выборы честными</h2>
+          <div class="project-statement__body">
+            <p>Наша позиция однозначна: мы считаем эти выборы полностью сфальсифицированными в интересах «Единой России» — партии жуликов и воров. Мы не считаем опубликованные цифры достоверным отражением воли избирателей.</p>
+            <p>Мы считаем, что из-за фальсификаций многие голоса, отданные за кандидатов, рекомендованных «Умным голосованием», не были засчитаны. Мы убеждены, что у избирателей украли их голоса, а вместе с ними — право влиять на будущее страны.</p>
+            <p>Публикуя результаты, мы не признаём их честность и не соглашаемся с ними. Мы показываем объявленные цифры, чтобы они оставались на виду. Наша оценка этих выборов от этого не меняется.</p>
+            <p class="project-statement__closing">Ваш голос принадлежит вам. Ни одна партия не имеет права его присваивать.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="election-results" aria-labelledby="results-title">
+        <div class="container election-results__inner">
+          <p class="election-results__eyebrow">Госдума · 18–20 сентября 2026</p>
+          <h2 id="results-title">Результаты выборов</h2>
+          <aside class="election-results__notice" aria-label="Статус результатов">
+            <strong>Предварительные данные</strong>
+            <p>Подсчёт голосов продолжается. Эти результаты не окончательные и могут измениться.</p>
+          </aside>
+          <div class="election-results__panel">
+            <div class="election-results__heading">
+              <h3>По партийным спискам</h3>
+              <p>Доля голосов, %</p>
+            </div>
+            <h4 class="election-results__group" id="results-passing">Проходят по спискам <span>5% и выше</span></h4>
+            <ol class="election-results__list" aria-labelledby="results-passing">
+              <li class="election-results__row">
+                <img src="edinaia-rossiia-2.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Единая Россия</span>
+                <strong class="election-results__value">57,96%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:57.96%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="kprf-11.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">КПРФ</span>
+                <strong class="election-results__value">13,67%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:13.67%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="ldpr-13.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">ЛДПР</span>
+                <strong class="election-results__value">8,96%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:8.96%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="novye-liudi-15.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Новые люди</span>
+                <strong class="election-results__value">7,91%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:7.91%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="spravedlivaia-rossiia-30.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Справедливая Россия</span>
+                <strong class="election-results__value">5,10%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:5.10%"></span></span>
+              </li>
+            </ol>
+            <h4 class="election-results__group election-results__group--below" id="results-below">Не проходят по спискам <span>Менее 5%</span></h4>
+            <ol class="election-results__list election-results__list--below" start="6" aria-labelledby="results-below">
+              <li class="election-results__row">
+                <img src="partiia-pensionerov-20.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Партия пенсионеров</span>
+                <strong class="election-results__value">1,97%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:1.97%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="zelenye-new-35.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Зелёные</span>
+                <strong class="election-results__value">1,15%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:1.15%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="kommunisty-rossii-9.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Коммунисты России</span>
+                <strong class="election-results__value">0,85%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:0.85%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="rodina-24.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Родина</span>
+                <strong class="election-results__value">0,71%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:0.71%"></span></span>
+              </li>
+              <li class="election-results__row">
+                <img src="partiia-priamoi-demokratii-21.webp" alt="" width="64" height="64" loading="lazy" />
+                <span class="election-results__name">Партия прямой демократии</span>
+                <strong class="election-results__value">0,35%</strong>
+                <span class="election-results__track" aria-hidden="true"><span style="width:0.35%"></span></span>
+              </li>
+            </ol>
+            <p class="election-results__explanation">Разделение предварительное и касается только партийных списков. По данным источника, «Родина» также получает одно место по одномандатному округу.</p>
+            <p class="election-results__source">Данные на <time datetime="2026-09-21T17:00:00">21 сентября 2026, 17:00</time> из таблицы результатов по федеральным партийным спискам в <a href="https://www.kp.ru/daily/277817/5305889/" target="_blank" rel="noopener noreferrer">публикации KP.RU <svg class="arrow-icon" viewBox="0 0 622 618" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M58.5 563L545 76.5M0 76.5H545V617.5" stroke="currentColor" stroke-width="153" /></svg></a>. Обновление на сайте — вручную.</p>
+          </div>
+        </div>
+      </section>
 
       <section id="socials" class="socials" aria-labelledby="socials-title">
         <div class="container">
