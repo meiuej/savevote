@@ -297,7 +297,7 @@ section[id]{scroll-margin-top:96px}
 .election-results{padding:20px 0 64px}
 .election-results__inner{max-width:1000px}
 .election-results__eyebrow{text-align:center;font:500 14px/1.5 Manrope,Arial,sans-serif;margin-bottom:18px}
-.election-results h2{text-align:center;font-size:clamp(42px,6vw,76px)}
+.election-results h2{text-align:center;font-size:clamp(42px,6vw,76px);margin-bottom:clamp(24px,4vw,40px)}
 .election-results__notice{margin:32px 0 20px;padding:22px 28px;border-radius:24px;background:#fff0cc;color:#604410;font-family:Manrope,Arial,sans-serif}
 .election-results__notice strong{display:block;font-size:18px;margin-bottom:6px}
 .election-results__notice p{font-size:15px;line-height:1.6}
